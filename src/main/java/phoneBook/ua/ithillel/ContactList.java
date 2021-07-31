@@ -18,7 +18,7 @@ public class ContactList {
         contactList.set(index, contact);
     }
 
-    public int size(int size) {
+    public int size() {
         return contactList.size();
     }
 

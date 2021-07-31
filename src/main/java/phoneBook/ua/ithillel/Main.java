@@ -15,7 +15,7 @@ public class Main {
         actions.add(new ReadAllMenuAction(scanner, memory));
         actions.add(new AddContactMenuAction(scanner, memory));
         actions.add(new RemoveContactMenuAction(scanner, memory));
-
+        actions.add(new FindContactMenuAction(scanner, memory));
         Menu menu = new Menu(scanner, actions);
         menu.run();
 
