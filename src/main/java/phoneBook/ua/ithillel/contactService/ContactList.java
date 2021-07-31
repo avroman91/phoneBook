@@ -28,6 +28,7 @@ public class ContactList {
 
     @Override
     public String toString() {
+        if (contacts.size()==0) return "Phonebook is empty";
         StringBuilder st = new StringBuilder();
         st.append("Your phone book: \n");
         for (int i = 0; i < contacts.size(); i++) {
