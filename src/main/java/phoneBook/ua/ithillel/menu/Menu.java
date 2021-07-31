@@ -1,5 +1,6 @@
 package phoneBook.ua.ithillel.menu;
 
+import phoneBook.ua.ithillel.contactService.ContactsService;
 import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 
 import java.util.List;

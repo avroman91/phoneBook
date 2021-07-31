@@ -26,8 +26,4 @@ public class FindContactMenuAction implements MenuAction {
         return "Find by name";
     }
 
-    @Override
-    public boolean closeAfter() {
-        return false;
-    }
 }

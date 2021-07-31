@@ -25,8 +25,4 @@ public class ReadAllMenuAction implements MenuAction {
         return "Read phone book";
     }
 
-    @Override
-    public boolean closeAfter() {
-        return false;
-    }
 }

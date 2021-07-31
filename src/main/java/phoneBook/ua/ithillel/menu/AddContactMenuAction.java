@@ -26,14 +26,9 @@ public class AddContactMenuAction implements MenuAction {
         inMemoryContactsService.add(newContact);
     }
 
-
     @Override
     public String getName() {
         return "Add new contact";
     }
 
-    @Override
-    public boolean closeAfter() {
-        return false;
-    }
 }
