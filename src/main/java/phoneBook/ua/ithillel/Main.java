@@ -12,10 +12,9 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         List<MenuAction> actions = new ArrayList<>();
-        ContactList contactList = new ContactList(new ArrayList<>());
-        InMemoryContactsService memory = new InMemoryContactsService(contactList);
+        InMemoryContactsService memory = new InMemoryContactsService();
         actions.add(new ReadAllMenuAction(scanner, memory));
-        actions.add(new AddContactMenuAction(scanner, memory));
+        actions.add(new AddContactMenuAction(memory));
         actions.add(new RemoveContactMenuAction(scanner, memory));
         actions.add(new FindContactMenuAction(scanner, memory));
         Menu menu = new Menu(scanner, actions);

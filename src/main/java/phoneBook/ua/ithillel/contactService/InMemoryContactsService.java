@@ -1,15 +1,15 @@
 package phoneBook.ua.ithillel.contactService;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Scanner;
 
 public class InMemoryContactsService implements ContactsService {
 
-    private ContactList contactList;
 
-    public InMemoryContactsService(ContactList contactList) {
-        this.contactList = contactList;
-    }
+    private ContactList contactList = new ContactList();
+
 
     @Override
     public ContactList getAll() {

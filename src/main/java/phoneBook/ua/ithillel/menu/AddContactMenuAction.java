@@ -8,11 +8,9 @@ import java.util.Scanner;
 
 public class AddContactMenuAction implements MenuAction {
 
-    private Scanner scan;
     private InMemoryContactsService inMemoryContactsService;
 
-    public AddContactMenuAction(Scanner scan, InMemoryContactsService inMemoryContactsService) {
-        this.scan = scan;
+    public AddContactMenuAction(InMemoryContactsService inMemoryContactsService) {
         this.inMemoryContactsService = inMemoryContactsService;
     }
 
