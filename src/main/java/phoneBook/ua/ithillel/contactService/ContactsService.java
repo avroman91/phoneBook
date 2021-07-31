@@ -1,4 +1,4 @@
-package phoneBook.ua.ithillel;
+package phoneBook.ua.ithillel.contactService;
 
 public interface ContactsService {
 

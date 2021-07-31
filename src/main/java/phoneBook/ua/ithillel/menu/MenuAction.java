@@ -1,7 +1,5 @@
 package phoneBook.ua.ithillel.menu;
 
-import phoneBook.ua.ithillel.InMemoryContactsService;
-
 import java.util.Scanner;
 
 public interface MenuAction {

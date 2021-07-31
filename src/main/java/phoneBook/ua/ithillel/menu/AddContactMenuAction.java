@@ -1,9 +1,8 @@
 package phoneBook.ua.ithillel.menu;
 
 
-import phoneBook.ua.ithillel.Contact;
-import phoneBook.ua.ithillel.ContactsService;
-import phoneBook.ua.ithillel.InMemoryContactsService;
+import phoneBook.ua.ithillel.contactService.Contact;
+import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 
 import java.util.Scanner;
 
@@ -24,7 +23,6 @@ public class AddContactMenuAction implements MenuAction {
         System.out.print("Enter contact phone number: ");
         String phone = scan.nextLine();
         Contact newContact = new Contact(name, phone);
-        System.out.println(newContact);
         inMemoryContactsService.add(newContact);
     }
 

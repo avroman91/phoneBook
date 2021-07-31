@@ -1,11 +1,11 @@
-package phoneBook.ua.ithillel;
+package phoneBook.ua.ithillel.contactService;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 public class InMemoryContactsService implements ContactsService {
 
-    public ContactList contactList;
-
+    private ContactList contactList;
 
     public InMemoryContactsService(ContactList contactList) {
         this.contactList = contactList;
@@ -24,5 +24,14 @@ public class InMemoryContactsService implements ContactsService {
     @Override
     public void add(Contact contact) {
         contactList.add(contact);
+    }
+
+    public Object find(String name) {
+        for (int i = 0; i < contactList.size(); i++) {
+            if (contactList.get(i).getName().toLowerCase(Locale.ROOT).contains(name.toLowerCase(Locale.ROOT))) {
+                return contactList.get(i);
+            }
+        }
+        return "There is no such contact";
     }
 }

@@ -1,10 +1,10 @@
-package phoneBook.ua.ithillel;
+package phoneBook.ua.ithillel.contactService;
 
 import java.util.*;
 
 public class ContactList {
 
-    public List<Contact> contactList = new ArrayList();
+    private List<Contact> contactList = new ArrayList();
 
     public ContactList(List<Contact> contactList) {
         this.contactList = contactList;
@@ -35,7 +35,7 @@ public class ContactList {
         StringBuilder st = new StringBuilder();
         st.append("Your phone book: \n");
         for (int i = 0; i < contactList.size(); i++) {
-            st.append(i + 1).append(" ").append(contactList.get(i).getName()).append("\n");
+            st.append(i + 1).append(".").append(contactList.get(i).getName()).append("\n");
         }
         st.append("End");
         return st.toString();

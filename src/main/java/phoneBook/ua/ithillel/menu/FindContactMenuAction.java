@@ -1,8 +1,7 @@
 package phoneBook.ua.ithillel.menu;
 
-import phoneBook.ua.ithillel.InMemoryContactsService;
+import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class FindContactMenuAction implements MenuAction {
@@ -19,11 +18,7 @@ public class FindContactMenuAction implements MenuAction {
     public void doAction(Scanner sc) {
         System.out.print("Please enter contact name or part of the name: ");
         String name = sc.nextLine();
-        for (int i = 0; i < inMemoryContactsService.contactList.size(); i++) {
-            if (inMemoryContactsService.contactList.get(i).getName().toLowerCase(Locale.ROOT).contains(name.toLowerCase(Locale.ROOT))){
-                System.out.println(inMemoryContactsService.contactList.get(i));
-            };
-        }
+        System.out.println(inMemoryContactsService.find(name));
     }
 
     @Override

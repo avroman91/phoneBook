@@ -1,6 +1,6 @@
 package phoneBook.ua.ithillel.menu;
 
-import phoneBook.ua.ithillel.InMemoryContactsService;
+import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 
 import java.util.List;
 import java.util.Scanner;
@@ -42,11 +42,8 @@ public class Menu {
             if (choice == actions.size()) {
                 break;
             }
-
             actions.get(choice).doAction(sc);
-
         }
-
     }
 
     public void addAction(MenuAction action) {
