@@ -1,6 +1,5 @@
 package phoneBook.ua.ithillel;
 
-import phoneBook.ua.ithillel.contactService.ContactList;
 import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 import phoneBook.ua.ithillel.menu.*;
 
