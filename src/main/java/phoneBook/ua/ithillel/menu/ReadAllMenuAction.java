@@ -19,7 +19,7 @@ public class ReadAllMenuAction implements MenuAction {
 
     @Override
     public String getName() {
-        return "Read phone book";
+        return "Read phonebook";
     }
 
 }
