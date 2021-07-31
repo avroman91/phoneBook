@@ -13,10 +13,10 @@ public class RemoveContactMenuAction implements MenuAction {
     }
 
     @Override
-    public void doAction(Scanner sc) {
+    public void doAction(Scanner scan) {
         System.out.print("Please enter index of contact which you want to delete: ");
-        int index = sc.nextInt() - 1;
-        sc.nextLine();
+        int index = scan.nextInt() - 1;
+        scan.nextLine();
         inMemoryContactsService.remove(index);
     }
 

@@ -13,9 +13,9 @@ public class FindContactMenuAction implements MenuAction {
     }
 
     @Override
-    public void doAction(Scanner sc) {
+    public void doAction(Scanner scan) {
         System.out.print("Please enter contact name or part of the name: ");
-        String name = sc.nextLine();
+        String name = scan.nextLine();
         System.out.println(inMemoryContactsService.find(name));
     }
 

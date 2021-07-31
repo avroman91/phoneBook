@@ -13,9 +13,8 @@ public class ReadAllMenuAction implements MenuAction {
     }
 
     @Override
-    public void doAction(Scanner sc) {
+    public void doAction(Scanner scan) {
         System.out.println(inMemoryContactsService.getAll());
-
     }
 
     @Override
