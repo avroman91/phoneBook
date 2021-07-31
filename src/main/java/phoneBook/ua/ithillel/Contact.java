@@ -12,4 +12,9 @@ public class Contact {
         this.name = name;
         this.phone = phone;
     }
+
+    @Override
+    public String toString() {
+        return name + "/" + phone;
+    }
 }

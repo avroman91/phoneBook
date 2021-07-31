@@ -4,8 +4,12 @@ import java.util.Scanner;
 
 public class InMemoryContactsService implements ContactsService {
 
-    public ContactList contactList = new ContactList();
+    public ContactList contactList;
 
+
+    public InMemoryContactsService(ContactList contactList) {
+        this.contactList = contactList;
+    }
 
     @Override
     public ContactList getAll() {
@@ -18,7 +22,7 @@ public class InMemoryContactsService implements ContactsService {
     }
 
     @Override
-    public void add(Contact contact, InMemoryContactsService inMemoryContactsService) {
-
+    public void add(Contact contact) {
+        contactList.add(contact);
     }
 }

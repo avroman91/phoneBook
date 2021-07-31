@@ -2,14 +2,22 @@ package phoneBook.ua.ithillel.menu;
 
 
 import phoneBook.ua.ithillel.InMemoryContactsService;
-import phoneBook.ua.ithillel.MenuAction;
 
 import java.util.Scanner;
 
 public class RemoveContactMenuAction implements MenuAction {
-    @Override
-    public void doAction(Scanner sc, InMemoryContactsService inMemoryContactsService)  {
+    private Scanner sc;
+    private InMemoryContactsService inMemoryContactsService;
+
+    public RemoveContactMenuAction(Scanner sc, InMemoryContactsService inMemoryContactsService) {
+        this.sc = sc;
+        this.inMemoryContactsService = inMemoryContactsService;
     }
+
+    @Override
+    public void doAction(Scanner sc) {
+    }
+
 
     @Override
     public String getName() {

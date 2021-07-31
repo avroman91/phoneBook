@@ -1,9 +1,7 @@
 package phoneBook.ua.ithillel.menu;
 
 import phoneBook.ua.ithillel.InMemoryContactsService;
-import phoneBook.ua.ithillel.MenuAction;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -19,26 +17,25 @@ public class Menu {
     InMemoryContactsService inMemoryContactsService;
 
 
-
     private void printActions() {
         for (int i = 0; i < actions.size(); i++) {
             System.out.printf("%d - %s\n", i + 1, actions.get(i).getName());
         }
-        System.out.printf("%d - exit\n", actions.size()+1);
+        System.out.printf("%d - exit\n", actions.size() + 1);
     }
 
-    private int getChoice () {
+    private int getChoice() {
         System.out.print("Enter your choice: ");
         int choice = sc.nextInt();
         sc.nextLine();
-        return choice-1;
+        return choice - 1;
     }
 
     public void run() {
-        while (true){
+        while (true) {
             printActions();
             int choice = getChoice();
-            if(choice<0 || choice > actions.size()){
+            if (choice < 0 || choice > actions.size()) {
                 System.out.println("Incorrect choice");
                 continue;
             }
@@ -46,11 +43,12 @@ public class Menu {
                 break;
             }
 
-            actions.get(choice).doAction(sc,inMemoryContactsService);
+            actions.get(choice).doAction(sc);
 
         }
 
     }
+
     public void addAction(MenuAction action) {
         actions.add(action);
     }

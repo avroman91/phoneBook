@@ -7,7 +7,7 @@ public interface ContactsService {
 
     void remove(int index);
 
-    void add(Contact contact, InMemoryContactsService inMemoryContactsService);
+    void add(Contact contact);
 
 
 }
