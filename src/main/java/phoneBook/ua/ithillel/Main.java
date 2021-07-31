@@ -9,14 +9,13 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
         List<MenuAction> actions = new ArrayList<>();
         InMemoryContactsService memory = new InMemoryContactsService();
         actions.add(new ReadAllMenuAction(memory));
         actions.add(new AddContactMenuAction(memory));
         actions.add(new RemoveContactMenuAction(memory));
         actions.add(new FindContactMenuAction(memory));
-        Menu menu = new Menu(scanner, actions);
+        Menu menu = new Menu(actions);
         menu.run();
 
     }

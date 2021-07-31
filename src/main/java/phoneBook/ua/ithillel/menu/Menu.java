@@ -5,12 +5,11 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public Menu(Scanner sc, List<MenuAction> actions) {
-        this.sc = sc;
+    public Menu(List<MenuAction> actions) {
         this.actions = actions;
     }
 
-    private Scanner sc;
+    private Scanner scanner = new Scanner(System.in);
     private List<MenuAction> actions;
 
     private void printActions() {
@@ -22,8 +21,8 @@ public class Menu {
 
     private int getChoice() {
         System.out.print("Enter your choice: ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        int choice = scanner.nextInt();
+        scanner.nextLine();
         return choice - 1;
     }
 
@@ -38,7 +37,7 @@ public class Menu {
             if (choice == actions.size()) {
                 break;
             }
-            actions.get(choice).doAction(sc);
+            actions.get(choice).doAction(scanner);
         }
     }
 
