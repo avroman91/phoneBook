@@ -6,11 +6,9 @@ import java.util.Scanner;
 
 public class ReadAllMenuAction implements MenuAction {
 
-    private Scanner sc;
     private InMemoryContactsService inMemoryContactsService;
 
-    public ReadAllMenuAction(Scanner sc, InMemoryContactsService inMemoryContactsService) {
-        this.sc = sc;
+    public ReadAllMenuAction(InMemoryContactsService inMemoryContactsService) {
         this.inMemoryContactsService = inMemoryContactsService;
     }
 

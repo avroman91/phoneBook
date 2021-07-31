@@ -6,11 +6,9 @@ import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 import java.util.Scanner;
 
 public class RemoveContactMenuAction implements MenuAction {
-    private Scanner sc;
     private InMemoryContactsService inMemoryContactsService;
 
-    public RemoveContactMenuAction(Scanner sc, InMemoryContactsService inMemoryContactsService) {
-        this.sc = sc;
+    public RemoveContactMenuAction(InMemoryContactsService inMemoryContactsService) {
         this.inMemoryContactsService = inMemoryContactsService;
     }
 

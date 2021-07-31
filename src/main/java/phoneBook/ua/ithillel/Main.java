@@ -13,10 +13,10 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         List<MenuAction> actions = new ArrayList<>();
         InMemoryContactsService memory = new InMemoryContactsService();
-        actions.add(new ReadAllMenuAction(scanner, memory));
+        actions.add(new ReadAllMenuAction(memory));
         actions.add(new AddContactMenuAction(memory));
-        actions.add(new RemoveContactMenuAction(scanner, memory));
-        actions.add(new FindContactMenuAction(scanner, memory));
+        actions.add(new RemoveContactMenuAction(memory));
+        actions.add(new FindContactMenuAction(memory));
         Menu menu = new Menu(scanner, actions);
         menu.run();
 
