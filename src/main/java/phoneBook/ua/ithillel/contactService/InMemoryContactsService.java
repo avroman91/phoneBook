@@ -18,7 +18,7 @@ public class InMemoryContactsService implements ContactsService {
 
         if (contactList.size() == 0) {
             System.out.println("Phonebook is empty");
-        } else if (index < 0 || index >= contactList.size()){
+        } else if (index < 0 || index >= contactList.size()) {
             System.out.println("Incorrect input");
         } else {
             contactList.remove(index);
