@@ -1,9 +1,6 @@
 package phoneBook.ua.ithillel.contactService;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Locale;
-import java.util.Scanner;
 
 public class InMemoryContactsService implements ContactsService {
 
@@ -18,7 +15,12 @@ public class InMemoryContactsService implements ContactsService {
 
     @Override
     public void remove(int index) {
-        contactList.remove(index);
+
+        if (index <0 || index >= contactList.size()){
+            System.out.println("Incorrect input");
+        } else {
+            contactList.remove(index);
+        }
     }
 
     @Override
