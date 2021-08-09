@@ -20,7 +20,7 @@ public class FindContactMenuAction implements MenuAction {
         System.out.print("Please enter contact name or part of the name: ");
         String name = scan.nextLine();
         Contact found = inMemoryContactsService.findByName(name);
-        if (found != null){
+        if (found != null) {
             System.out.println(found);
         } else {
             System.out.println("There is no such contact");
