@@ -1,7 +1,10 @@
 package phoneBook.ua.ithillel.menu;
 
+import phoneBook.ua.ithillel.contactService.Contact;
+import phoneBook.ua.ithillel.contactService.ContactList;
 import phoneBook.ua.ithillel.contactService.InMemoryContactsService;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class FindContactMenuAction implements MenuAction {
@@ -16,7 +19,12 @@ public class FindContactMenuAction implements MenuAction {
     public void doAction(Scanner scan) {
         System.out.print("Please enter contact name or part of the name: ");
         String name = scan.nextLine();
-        System.out.println(inMemoryContactsService.find(name));
+        Contact found = inMemoryContactsService.findByName(name);
+        if (found != null){
+            System.out.println(found);
+        } else {
+            System.out.println("There is no such contact");
+        }
     }
 
     @Override

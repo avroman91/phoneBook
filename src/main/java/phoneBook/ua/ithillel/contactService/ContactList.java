@@ -1,6 +1,7 @@
 package phoneBook.ua.ithillel.contactService;
 
 import java.util.*;
+import java.util.function.Predicate;
 
 public class ContactList {
 
@@ -26,6 +27,7 @@ public class ContactList {
         contacts.add(contact);
     }
 
+
     @Override
     public String toString() {
         if (contacts.size() == 0) return "Phonebook is empty";
@@ -37,4 +39,5 @@ public class ContactList {
         st.append("End");
         return st.toString();
     }
+
 }
