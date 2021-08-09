@@ -21,13 +21,14 @@ public class ListUtils {
         }
     }
 
-    public static Contact filter(ContactList contactList, Predicate<Contact> predicate) {
+    public static ContactList filter(ContactList contactList, Predicate<Contact> predicate) {
+        ContactList filteredList = new ContactList();
         for (int i = 0; i < contactList.size(); i++) {
             if (predicate.test(contactList.get(i))) {
-                return contactList.get(i);
+                filteredList.add(contactList.get(i));
             }
         }
-        return null;
+        return filteredList;
     }
 
     public static <R> R reduce(ContactList contactList, R initValue, BiFunction<R, Contact, R> biFunction) {

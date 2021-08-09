@@ -8,6 +8,10 @@ public class Contact {
         return name;
     }
 
+    public String getPhone() {
+        return phone;
+    }
+
     public Contact(String name, String phone) {
         this.name = name;
         this.phone = phone;
