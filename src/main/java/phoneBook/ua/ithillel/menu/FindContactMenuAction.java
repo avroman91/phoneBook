@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class FindContactMenuAction implements MenuAction {
 
-    private final InMemoryContactsService inMemoryContactsService;
+    private InMemoryContactsService inMemoryContactsService;
 
     public FindContactMenuAction(InMemoryContactsService inMemoryContactsService) {
         this.inMemoryContactsService = inMemoryContactsService;
